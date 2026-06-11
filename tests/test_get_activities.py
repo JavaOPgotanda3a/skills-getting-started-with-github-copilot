@@ -1,6 +1,10 @@
 def test_get_activities_returns_all_activities(client):
+    # Arrange
+
+    # Act
     response = client.get("/activities")
 
+    # Assert
     assert response.status_code == 200
 
     payload = response.json()
